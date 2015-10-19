@@ -27,15 +27,15 @@ Jellyfish has the following requirements:
 * PostgreSQL 9.4+
 * Red Hat Enterprise Linux / CentOS
 
-To see a detailed list of [System Requirements](https://github.com/projectjellyfish/api/wiki/System-Requirements), please check out our [Wiki](https://github.com/projectjellyfish/api/wiki).
+Feel free to checkout our detailed list of [System Requirements](http://projectjellyfish.readthedocs.org/en/latest/requirements/).
 
 **How to Install Project Jellyfish**
 
 Jellyfish is a Ruby on Rails application.  Please choose the appropriate installation guide for your system:
 
-* Mac Users: [INSTALL-OSX.md](https://github.com/projectjellyfish/api/blob/master/docs/INSTALL-OSX.md) - Mac OS Installation (generally used for development)
+* Mac Users: [INSTALL-OSX.md](http://projectjellyfish.readthedocs.org/en/latest/install-guides/mac/) - Mac OS Installation (generally used for development)
 
-* Windows Users: [INSTALL-RHEL.md](https://github.com/projectjellyfish/api/blob/master/docs/INSTALL-RHEL.md)  - Red Hat Enterprise Linux / CentOS installation
+* Windows Users: [INSTALL-RHEL.md](http://projectjellyfish.readthedocs.org/en/latest/install-guides/rhel/)  - Red Hat Enterprise Linux / CentOS installation
 
 * Heroku Quick Install: 
 
