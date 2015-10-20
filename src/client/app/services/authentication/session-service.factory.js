@@ -11,7 +11,8 @@
       destroy: destroy,
       fullName: fullName,
       isAdmin: isAdmin,
-      isManager: isManager
+      isManager: isManager,
+      roleName: roleName
     };
 
     destroy();
@@ -48,6 +49,10 @@
 
     function isManager() {
       return isAdmin() || 'manager' === service.role;
+    }
+
+    function roleName() {
+      return service.role;
     }
   }
 })();

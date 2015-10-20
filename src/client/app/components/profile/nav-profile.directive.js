@@ -32,6 +32,7 @@
 
       function activate() {
         vm.name = SessionService.fullName();
+        vm.userRole = SessionService.roleName();
       }
     }
   }
