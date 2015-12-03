@@ -1,0 +1,44 @@
+<content-header short="true">
+    <div class="admin-themes-list__body">
+        <span class="content-header__title">Organization Themes</span>
+    </div>
+    <div class="admin-themes-list__aside">
+        <a ui-sref="admin.themes.create" class="btn-rounded">Add Organization Theme</a>
+    </div>
+</content-header>
+<div>
+    <table st-table="vm.themes" class="themes-table">
+        <thead>
+        <tr>
+            <th class="themes-table__heading themes-table__heading--padding"></th>
+            <th class="themes-table__heading themes-table__heading--actions">Theme</th>
+            <th class="themes-table__heading themes-table__heading--actions">Primary Color</th>
+            <th class="themes-table__heading themes-table__heading--actions">Secondary Color</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="themes-table__row" ng-repeat="row in vm.themes | filter:{status: '!ok'}">
+            <td class="themes-table__cell themes-table__cell--padding"></td>
+            <td class="themes-table__cell themes-table__cell--category">{{ ::row.category }}</td>
+             <td class="themes-table__cell themes-table__cell--status">
+              <status type="{{ ::row.status }}">{{ ::row.status }}</status>
+            </td>
+            <td class="themes-table__cell themes-table__cell--actions">
+                <a ui-sref="admin.themes.edit({id: row.id})" class="themes-table__action themes-table__action--edit">
+                    <img src="/images/ic_edit.png" alt="Edit"/>
+                </a>
+                <a href="#" class="themes-table__action themes-table__action--delete"
+                   confirmation
+                   confirmation-position="left-center"
+                   confirmation-message="Are you sure you want to remove this theme and it's content?"
+                   confirmation-ok-style="danger"
+                   confirmation-ok-text="Yes, Delete It"
+                   confirmation-on-ok="vm.deleteTheme(row)"
+                   confirmation-show-cancel="false">
+                    <img src="/images/ic_deletequestion.png" alt="Delete"/>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
